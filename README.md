@@ -1,6 +1,6 @@
-#Begining my learn path of Jenkins
+#Begining my learning path of Jenkins
 
-**Metadata for ubuntu quick instalation** 
+**Metadata for ubuntu quick installation** 
 #!/bin/bash
 sudo apt update
 sudo apt install openjdk-8-jdk -y 
@@ -15,7 +15,7 @@ sudo apt-get install jenkins -y
 sudo systemctl start jenkins 
 sudo systemctl enable jenkins 
 
-- Open jenkins console, on Global tool configuration we can configure JDK path /usr/lib/jvm/java-1.8.0-openjdk-amd64 and maven 3 
+- Open Jenkins console, on Global tool configuration we can configure JDK path /usr/lib/jvm/java-1.8.0-openjdk-amd64 and maven 3 
 
 
 - Example of pipeline
@@ -51,7 +51,7 @@ Getting **"sudo: a terminal is required to read the password"** aded Jenkins use
 - Using environment variables
 
 BUILD_ID
-The current build ID, identical to BUILD_NUMBER for builds created in Jenkins versions 1.597+
+The current build ID, is identical to BUILD_NUMBER for builds created in Jenkins versions 1.597+
 
 BUILD_NUMBER
 The current build number, such as "153"
@@ -59,7 +59,7 @@ The current build number, such as "153"
 BUILD_TAG
 String of jenkins-${JOB_NAME}-${BUILD_NUMBER}. Convenient to put into a resource file, a jar file, etc for easier identification
 
-Example of how to use these enrionment variables 
+Example of how to use these environment variables 
 stages {
         stage('Example') {
             steps {
@@ -68,7 +68,7 @@ stages {
 
 - Build 
 
-Jenkins has a number of plugins for invoking practically any build tool in general use, but this example will simply invoke make from a shell step (sh). The sh step assumes the system is Unix/Linux-based, for Windows-based systems the bat could be used instead.
+Jenkins has several plugins for invoking practically any build tool in general use, but this example will simply invoke make from a shell step (sh). The sh step assumes the system is Unix/Linux-based, for Windows-based systems the bat could be used instead.
 
 pipeline {
     agent any
